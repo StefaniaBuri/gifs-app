@@ -1,0 +1,13 @@
+<div class="d-flex justify-content-center">
+
+    <!-- CARGAR IMG GIF -->
+    <img [src]="url" [alt]="alt" class="card-img-top animate__animated animate__fadeIn" 
+    (load)="onLoad()"
+    [ngStyle]="{ display: hasLoaded ? '' : 'none'}">
+
+    <!-- CARGAR IMG LOADER -->
+    <img *ngIf="!hasLoaded" src="assets/loader-rings.svg" 
+    height="35" width="35" 
+    class="mt-3">
+
+</div>
